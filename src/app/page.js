@@ -5,6 +5,7 @@ import Features from "./features/features";
 import Testimonials from "./testimonials/testimonials";
 import Stats from "./stats/page";
 import Blog from "./blog/page";
+import CTA from "./cta/page";
 // import { Features } from "@headlessui/react/dist/utils/render";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Testimonials />
       <Stats />
       <Blog />
+      <CTA />
     </main>
   );
 }
