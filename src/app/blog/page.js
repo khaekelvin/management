@@ -1,10 +1,10 @@
 const posts = [
   {
     id: 1,
-    title: "Boost your conversion rate",
+    title: "Comprehensive Communication",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      " With integrated communication tools, SchoolFlow ensures that information flows smoothly between administrators, teachers, students, and parents. Instant notifications, announcements, and messaging keep everyone connected and informed.",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
     category: { title: "Marketing", href: "#" },
@@ -17,6 +17,40 @@ const posts = [
     },
   },
   // More posts...
+  {
+    id: 2,
+    title: "Effortless Administrative Tasks",
+    href: "#",
+    description:
+      "SchoolFlow simplifies complex administrative processes such as student enrollment, attendance tracking, scheduling, and report generation. This frees up valuable time for educators to focus on teaching and students to focus on learning.",
+    date: "Mar 16, 2020",
+    datetime: "2020-03-16",
+    category: { title: "Marketing", href: "#" },
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      href: "#",
+      imageUrl:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+  },
+  {
+    id: 3,
+    title: "Data-Driven Insights",
+    href: "#",
+    description:
+      "School administrators gain valuable insights through data analytics, helping them make informed decisions about curriculum enhancements, resource allocation, and strategic planning.",
+    date: "Mar 16, 2020",
+    datetime: "2020-03-16",
+    category: { title: "Marketing", href: "#" },
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      href: "#",
+      imageUrl:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+  },
 ];
 
 export default function Blog() {
