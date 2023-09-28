@@ -29,7 +29,7 @@ const featureses = [
   {
     name: "Push to deploy.",
     description:
-      "The Student Information Management feature of our school management system ensures that all student-related data is centralized, organized, and easily accessible to authorized users.",
+      "The Grade and Progress Tracking feature in your school management system empowers educators and administrators to manage grading, track student progress, and provide valuable insights into academic achievements.",
     icon: CloudArrowUpIcon,
   },
   {
