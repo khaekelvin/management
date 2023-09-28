@@ -2,6 +2,7 @@
 import React from "react";
 import Head from "./head/page";
 import Features from "./features/features";
+import Testimonials from "./testimonials/testimonials";
 // import { Features } from "@headlessui/react/dist/utils/render";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       {/* <HeaderBrand /> */}
       <Head />
       <Features />
+      <Testimonials />
     </main>
   );
 }
