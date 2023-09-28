@@ -21,11 +21,12 @@ export default function CTA() {
         <div className='mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2'>
           <div className='max-w-xl lg:max-w-lg'>
             <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-              Subscribe to our newsletter.
+              Subscribe to SchoolFlow
             </h2>
             <p className='mt-4 text-lg leading-8 text-gray-300'>
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
-              velit quis. Duis tempor incididunt dolore.
+              By subscribing to SchoolFlow, you'll receive regular email updates
+              about new features, important announcements, and educational
+              insights.
             </p>
             <div className='mt-6 flex max-w-md gap-x-4'>
               <label htmlFor='email-address' className='sr-only'>
