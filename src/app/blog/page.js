@@ -6,7 +6,7 @@ const posts = [
     description:
       " With integrated communication tools, SchoolFlow ensures that information flows smoothly between administrators, teachers, students, and parents. Instant notifications, announcements, and messaging keep everyone connected and informed.",
   },
-  // More posts...
+
   {
     id: 2,
     title: "Effortless Administrative Tasks",
@@ -27,8 +27,8 @@ export default function Blog() {
   return (
     <div className='bg-white py-24 sm:py-32'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-        <div className='mx-auto max-w-2xl lg:mx-0'>
-          <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+        <div className='mx-auto max-w-2xl lg:mx-0 '>
+          <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text'>
             What is SchoolFLow?
           </h2>
           <p className='mt-2 text-lg leading-8 text-gray-600'>
@@ -49,7 +49,7 @@ export default function Blog() {
                     {post.title}
                   </a>
                 </h3>
-                <p className='mt-5  text-sm leading-6 text-gray-600'>
+                <p className='mt-5 leading-6 text-gray-600'>
                   {post.description}
                 </p>
               </div>
