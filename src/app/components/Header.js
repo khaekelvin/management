@@ -57,10 +57,16 @@ export default function Header() {
           <a href='/' className='text-sm font-semibold leading-6 text-gray-900'>
             Home
           </a>
-          <a href='/' className='text-sm font-semibold leading-6 text-gray-900'>
+          <a
+            href='/feats'
+            className='text-sm font-semibold leading-6 text-gray-900'
+          >
             Features
           </a>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+          <a
+            href='/about'
+            className='text-sm font-semibold leading-6 text-gray-900'
+          >
             About Us
           </a>
         </Popover.Group>
