@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 
 export default function CTA() {
@@ -59,8 +45,9 @@ export default function CTA() {
               </div>
               <dt className='mt-4 font-semibold text-white'>Weekly articles</dt>
               <dd className='mt-2 leading-7 text-gray-400'>
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure
-                cupidatat duis commodo amet.
+                Discover how our School Management System can simplify
+                administrative tasks and enhance overall efficiency within your
+                educational institution.
               </dd>
             </div>
             <div className='flex flex-col items-start'>
@@ -72,8 +59,9 @@ export default function CTA() {
               </div>
               <dt className='mt-4 font-semibold text-white'>No spam</dt>
               <dd className='mt-2 leading-7 text-gray-400'>
-                Officia excepteur ullamco ut sint duis proident non adipisicing.
-                Voluptate incididunt anim.
+                We understand that your time is valuable. That's why we tailor
+                our communications to ensure you receive content that matters to
+                you.
               </dd>
             </div>
           </dl>
