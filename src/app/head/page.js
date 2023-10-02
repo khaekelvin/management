@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Logo from "../components/Logo";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -23,11 +24,12 @@ export default function Head() {
           <div className='flex lg:flex-1'>
             <a href='#' className='-m-1.5 p-1.5'>
               <span className='sr-only'>Your Company</span>
-              <img
+              {/* <img
                 className='h-8 w-auto'
                 src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
                 alt=''
-              />
+              /> */}
+              <Logo />
             </a>
           </div>
           <div className='flex lg:hidden'>
