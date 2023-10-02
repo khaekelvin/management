@@ -1,4 +1,5 @@
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
+import { FaHubspot } from "react-icons/fa";
 
 export default function CTA() {
   return (
@@ -6,8 +7,8 @@ export default function CTA() {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2'>
           <div className='max-w-xl lg:max-w-lg'>
-            <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-              Subscribe to SchoolFlow
+            <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl flex'>
+              Subscribe to SchoolFlow <FaHubspot className='h-10 w-auto ml-2' />
             </h2>
             <p className='mt-4 text-lg leading-8 text-gray-300'>
               By subscribing to SchoolFlow, you'll receive regular email updates

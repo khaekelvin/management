@@ -1,39 +1,34 @@
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
+import { FaRegAddressCard } from "react-icons/fa";
+import { FaRegAddressBook } from "react-icons/fa";
+import { FaRegChartBar } from "react-icons/fa";
+import { FaVoteYea } from "react-icons/fa";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Student Profile Management:.",
     description:
       "The Student Information Management feature of our school management system ensures that all student-related data is centralized, organized, and easily accessible to authorized users.",
-    icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates.",
+    name: "Document and File Management:",
     description:
-      "This feature serves as the foundation for various administrative and academic processes, enabling streamlined operations and enhanced communication.",
-    icon: LockClosedIcon,
+      "This feature enables the secure storage and organization of important student-related documents and files. It should support the uploading and storage of documents such as medical records, consent forms, transcripts, and other important paperwork.",
   },
 ];
 
 const featureses = [
   {
-    name: "Push to deploy.",
+    name: "Performance Analytics and Progress Tracking: ",
     description:
-      "The Grade and Progress Tracking feature in your school management system empowers educators and administrators to manage grading, track student progress, and provide valuable insights into academic achievements.",
-    icon: CloudArrowUpIcon,
+      "This feature allows educators, students, and parents to monitor a student's academic progress over time. It should provide comprehensive performance analytics and subject-specific strengths and weaknesses.",
   },
   {
-    name: "SSL certificates.",
+    name: "Real-Time Gradebook:",
     description:
-      "This feature serves as the foundation for various administrative and academic processes, enabling streamlined operations and enhanced communication.",
-    icon: LockClosedIcon,
+      " Implement a real-time digital gradebook that allows teachers to input grades instantly as assignments and assessments are completed. This ensures that students, parents, and teachers have up-to-date information on academic performance. ",
   },
 ];
-// mx-auto max-w-7xl px-6 lg:px-8
+
 export default function Features() {
   return (
     <div className='overflow-hidden bg-white py-25 sm:py-25 flex mx-auto'>
@@ -49,7 +44,7 @@ export default function Features() {
                 {features.map((feature) => (
                   <div key={feature.name} className='relative pl-9'>
                     <dt className='inline font-semibold text-gray-900'>
-                      <feature.icon
+                      <FaRegAddressCard
                         className='absolute left-1 top-1 h-5 w-5 text-indigo-600'
                         aria-hidden='true'
                       />
@@ -63,7 +58,7 @@ export default function Features() {
           </div>
         </div>
       </div>
-      {/* mx-auto max-w-7xl px-6 lg:px-8 */}
+
       <div className=''>
         <div className='mx-auto  max-w-2xl gap-100  gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2'>
           <div className='lg:pr-8 lg:pt-4 flex flex-wrap'>
@@ -76,7 +71,7 @@ export default function Features() {
                 {featureses.map((feature) => (
                   <div key={feature.name} className='relative pl-9'>
                     <dt className='inline font-semibold text-gray-900'>
-                      <feature.icon
+                      <FaRegAddressBook
                         className='absolute left-1 top-1 h-5 w-5 text-indigo-600'
                         aria-hidden='true'
                       />
