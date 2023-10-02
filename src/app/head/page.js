@@ -3,13 +3,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../components/Logo";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Features", href: "/feats" },
   { name: "About Us", href: "/about" },
 ];
+
+import Logo from "../components/Logo";
 
 export default function Head() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -55,7 +56,7 @@ export default function Head() {
           </div>
           <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
             <a
-              href='#'
+              href='/login'
               className='text-sm font-semibold leading-6 text-gray-900'
             >
               Log in <span aria-hidden='true'>&rarr;</span>
