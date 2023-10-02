@@ -1,10 +1,9 @@
 "use client";
 import Header from "../components/Header";
 const links = [
-  { name: "Open roles", href: "#" },
-  { name: "Internship program", href: "#" },
-  { name: "Our values", href: "#" },
-  { name: "Meet our leadership", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "Features", href: "/feats" },
+  { name: "Sign Up ", href: "/login" },
 ];
 const stats = [
   { name: "Schools", value: "2 Thousand" },
@@ -47,9 +46,11 @@ export default function About() {
               Work with us
             </h2>
             <p className='mt-6 text-lg leading-8 '>
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              At SchoolFlow, we are dedicated to providing innovative solutions
+              for educational institutions to enhance the learning experience
+              and streamline administrative processes. We believe in the power
+              of technology to transform education, and we are always on the
+              lookout for passionate individuals to join our team.
             </p>
           </div>
           <div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
