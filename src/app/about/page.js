@@ -3,7 +3,7 @@ import Header from "../components/Header";
 const links = [
   { name: "Home", href: "/" },
   { name: "Features", href: "/feats" },
-  { name: "Sign Up ", href: "/login" },
+  { name: "Sign Up ", href: "/signr" },
 ];
 const stats = [
   { name: "Schools", value: "2 Thousand" },
