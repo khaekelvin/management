@@ -45,7 +45,7 @@ export default function About() {
             <h2 className='text-8xl font-bold tracking-tight sm:text-8xl'>
               Work with us
             </h2>
-            <p className='mt-10 text-2xl  leading-'>
+            <p className='mt-10 text-2xl  leading-9'>
               At SchoolFlow, we are dedicated to providing innovative solutions
               for educational institutions to enhance the learning experience
               and streamline administrative processes. We believe in the power
