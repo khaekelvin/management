@@ -42,10 +42,10 @@ export default function About() {
         </div>
         <div className='mx-auto max-w-7xl px-6 lg:px-8 text-black'>
           <div className='mx-auto max-w-2xl lg:mx-0'>
-            <h2 className='text-4xl font-bold tracking-tight sm:text-6xl'>
+            <h2 className='text-8xl font-bold tracking-tight sm:text-8xl'>
               Work with us
             </h2>
-            <p className='mt-6 text-lg leading-8 '>
+            <p className='mt-10 text-2xl  leading-'>
               At SchoolFlow, we are dedicated to providing innovative solutions
               for educational institutions to enhance the learning experience
               and streamline administrative processes. We believe in the power
@@ -54,18 +54,18 @@ export default function About() {
             </p>
           </div>
           <div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
-            <div className='grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 sm:grid-cols-2 md:flex lg:gap-x-10'>
+            <div className='grid grid-cols-1 gap-x-8 gap-y-6 text-lg font-semibold leading-7 sm:grid-cols-2 md:flex lg:gap-x-10'>
               {links.map((link) => (
                 <a key={link.name} href={link.href}>
                   {link.name} <span aria-hidden='true'>&rarr;</span>
                 </a>
               ))}
             </div>
-            <dl className='mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4'>
+            <dl className='mt-16 grid grid-cols-1 gap-10 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4'>
               {stats.map((stat) => (
                 <div key={stat.name} className='flex flex-col-reverse'>
-                  <dt className='text-base leading-7 '>{stat.name}</dt>
-                  <dd className='text-2xl font-bold leading-9 tracking-tight '>
+                  <dt className='text-2xl mt-3 leading-7 '>{stat.name}</dt>
+                  <dd className='text-4xl font-bold leading-9 tracking-tight '>
                     {stat.value}
                   </dd>
                 </div>
