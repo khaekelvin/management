@@ -38,16 +38,19 @@ export default function About() {
         </div>
         <div className='mx-auto max-w-7xl px-6 lg:px-8 text-black'>
           <div className='mx-auto max-w-2xl lg:mx-0'>
-            <h2 className='text-8xl font-bold tracking-tight sm:text-8xl'>
-              Work with us
-            </h2>
-            <p className='mt-10 text-2xl  leading-9'>
-              At SchoolFlow, we are dedicated to providing innovative solutions
-              for educational institutions to enhance the learning experience
-              and streamline administrative processes. We believe in the power
-              of technology to transform education, and we are always on the
-              lookout for passionate individuals to join our team.
-            </p>
+            <div>
+              <h2 className='text-8xl font-bold tracking-tight sm:text-8xl'>
+                Work with us
+              </h2>
+              <p className='mt-10 text-2xl  leading-9'>
+                At SchoolFlow, we are dedicated to providing innovative
+                solutions for educational institutions to enhance the learning
+                experience and streamline administrative processes. We believe
+                in the power of technology to transform education, and we are
+                always on the lookout for passionate individuals to join our
+                team.
+              </p>
+            </div>
           </div>
           <div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
             <dl className='mt-16 grid grid-cols-1 gap-10 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4'>
