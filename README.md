@@ -1,36 +1,37 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# School Management System
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The School Management System is a web-based application designed to streamline the administrative and academic activities of a school. It provides features for managing students, teachers, classes, grades, and other aspects of school life.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Built with **React** for the frontend and **Tailwind CSS** for styling.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Student Management:** Add, edit, and delete student profiles.
+- **Teacher Management:** Manage teacher information and assignments.
+- **Class Management:** Organize classes and assign teachers.
+- **Attendance Tracking:** Track daily attendance for students and teachers.
+- **Gradebook:** Record and manage student grades.
+- **Events and Announcements:** Share important events and announcements.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend:** React, Tailwind CSS
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** JWT (JSON Web Tokens)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Before you begin, ensure you have met the following requirements:
 
-## Deploy on Vercel
+- Node.js and npm installed.
+- MongoDB installed and running.
+- (Optional) Docker installed for containerization.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
