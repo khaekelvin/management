@@ -132,7 +132,7 @@ export default function Head() {
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
           <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
           <div className='text-center'>
-            <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+            <h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
               Simplify.<span className='text-amber-400'>Organize</span>.Strive
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-600'>

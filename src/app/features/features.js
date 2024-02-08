@@ -20,7 +20,7 @@ const featureses = [
   {
     name: "Performance Analytics and Progress Tracking: ",
     description:
-      "This feature allows educators, students, and parents to monitor a student's academic progress over time. It should provide comprehensive performance analytics and subject-specific strengths and weaknesses.",
+      "This feature allows educators, students, and parents to monitor a student's academic progress over time. It should provide comprehensive performance analytics.",
   },
   {
     name: "Real-Time Gradebook:",
@@ -31,7 +31,7 @@ const featureses = [
 
 export default function Features() {
   return (
-    <div className='overflow-hidden bg-white py-25 sm:py-25 flex mx-auto'>
+    <div className='overflow-hidden bg-white py-25 sm:py-25 flex mx-auto flex-wrap'>
       <div className=''>
         <div className='mx-auto  max-w-2xl  gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none '>
           <div className='lg:pr-20 lg:pt-4'>
@@ -63,7 +63,7 @@ export default function Features() {
         <div className='mx-auto  max-w-2xl gap-100  gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2'>
           <div className='lg:pr-8 lg:pt-4 flex flex-wrap'>
             <div className='lg:max-w-lg'>
-              <p className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
+              <p className='mt-2 text-lg font-bold tracking-tight text-gray-900 sm:text-3xl'>
                 Grade and Progress Tracking
               </p>
 
