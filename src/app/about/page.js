@@ -1,5 +1,6 @@
 "use client";
 import Header from "../components/Header";
+import { FaHubspot } from "react-icons/fa";
 
 const stats = [
   { name: "Schools", value: "2 Thousand" },
@@ -37,11 +38,13 @@ export default function About() {
           />
         </div>
         <div className='mx-auto max-w-7xl px-6 lg:px-8 text-black'>
+        <div className="flex">
+          <div>
           <div className='mx-auto max-w-2xl lg:mx-0'>
-            <h2 className='text-8xl font-bold tracking-tight sm:text-8xl'>
+            <h2 className='text-5xl font-bold tracking-tight sm:text-8xl'>
               Work with us
             </h2>
-            <p className='mt-10 text-2xl  leading-9'>
+            <p className='mt-10 text-xl sm:text-2xl leading-9'>
               At SchoolFlow, we are dedicated to providing innovative solutions
               for educational institutions to enhance the learning experience
               and streamline administrative processes. We believe in the power
@@ -50,16 +53,19 @@ export default function About() {
             </p>
           </div>
           <div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
-            <dl className='mt-16 grid grid-cols-1 gap-10 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4'>
+            <dl className='mt-16 grid grid-cols-1 gap-10 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3'>
               {stats.map((stat) => (
                 <div key={stat.name} className='flex flex-col-reverse'>
-                  <dt className='text-2xl mt-3 leading-7 '>{stat.name}</dt>
-                  <dd className='text-4xl font-bold leading-9 tracking-tight '>
+                  <dt className='text-xl sm:text-xl mt-3 leading-7 '>{stat.name}</dt>
+                  <dd className='text-2xl sm:text-3xl font-bold leading-9 tracking-tight '>
                     {stat.value}
                   </dd>
                 </div>
               ))}
             </dl>
+          </div>
+          </div>
+          <FaHubspot className=' mx-auto h-[450px] w-auto hidden sm:flex' />
           </div>
         </div>
       </div>
