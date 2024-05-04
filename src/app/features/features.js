@@ -31,9 +31,9 @@ const featureses = [
 
 export default function Features() {
   return (
-    <div className='overflow-hidden bg-white py-25 sm:py-25 flex mx-auto flex-wrap'>
+    <div className='overflow-hidden bg-white py-25 sm:py-25 flex mx-auto flex-wrap max-w-[350px] lg:max-w-[1136px]'>
       <div className=''>
-        <div className='mx-auto  max-w-2xl  gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none '>
+        <div className='  gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none '>
           <div className='lg:pr-20 lg:pt-4'>
             <div className='lg:max-w-lg'>
               <p className='mt-2 text-lg font-bold tracking-tight text-gray-900 sm:text-3xl '>
