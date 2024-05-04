@@ -36,11 +36,11 @@ export default function Features() {
         <div className='  gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none '>
           <div className='lg:pr-20 lg:pt-4'>
             <div className='lg:max-w-lg'>
-              <p className='mt-2 text-lg font-bold tracking-tight text-gray-900 sm:text-3xl '>
+              <p className=' text-lg font-bold tracking-tight text-gray-900 sm:text-3xl '>
                 Student Information Management
               </p>
 
-              <dl className='mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none'>
+              <dl className='mt-5 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none'>
                 {features.map((feature) => (
                   <div key={feature.name} className='relative pl-9'>
                     <dt className='inline font-semibold text-gray-900'>
@@ -63,11 +63,11 @@ export default function Features() {
         <div className='mx-auto  max-w-2xl gap-100  gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2'>
           <div className='lg:pr-8 lg:pt-4 flex flex-wrap'>
             <div className='lg:max-w-lg'>
-              <p className='mt-2 text-lg font-bold tracking-tight text-gray-900 sm:text-3xl'>
+              <p className='mt-5 lg:mt-0 text-lg font-bold tracking-tight text-gray-900 sm:text-3xl'>
                 Grade and Progress Tracking
               </p>
 
-              <dl className='mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none'>
+              <dl className='mt-5 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none'>
                 {featureses.map((feature) => (
                   <div key={feature.name} className='relative pl-9'>
                     <dt className='inline font-semibold text-gray-900'>
