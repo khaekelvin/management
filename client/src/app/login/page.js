@@ -22,7 +22,7 @@ export default function Login() {
                 htmlFor='email'
                 className='block text-sm font-medium leading-6 text-gray-900'
               >
-                Email address
+                School Email address
               </label>
               <div className='mt-2'>
                 <input
@@ -44,14 +44,14 @@ export default function Login() {
                 >
                   Password
                 </label>
-                <div className='text-sm'>
+                {/* <div className='text-sm'>
                   <a
                     href='#'
                     className='font-semibold text-indigo-600 hover:text-indigo-500'
                   >
                     Forgot password?
                   </a>
-                </div>
+                </div> */}
               </div>
               <div className='mt-2'>
                 <input
