@@ -7,6 +7,7 @@ import Stats from "./stats/page";
 import Blog from "./blog/page";
 import CTA from "./cta/page";
 
+
 export default function Home() {
   return (
     <main className='flex overflow-x-hidden min-h-screen bg-white w-screen flex-col'>
@@ -16,6 +17,7 @@ export default function Home() {
       <Blog />
       <Stats />
       <CTA />
+      
     </main>
   );
 }

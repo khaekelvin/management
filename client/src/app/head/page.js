@@ -23,13 +23,8 @@ export default function Head() {
           aria-label='Global'
         >
           <div className='flex lg:flex-1'>
-            <a href='#' className='-m-1.5 p-1.5'>
-              <span className='sr-only'>Your Company</span>
-              {/* <img
-                className='h-8 w-auto'
-                src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-                alt=''
-              /> */}
+            <a href='/' className='-m-1.5 p-1.5'>
+              <span className='sr-only'>Your Company</span>            
               <Logo />
             </a>
           </div>
@@ -104,7 +99,7 @@ export default function Head() {
                 </div>
                 <div className='py-6'>
                   <a
-                    href='#'
+                    href='/login'
                     className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                   >
                     Log in
@@ -142,7 +137,7 @@ export default function Head() {
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>
               <a
-                href='/sign'
+                href='/login'
                 className='rounded-md bg-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
               >
                 Get started
