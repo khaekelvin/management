@@ -9,14 +9,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Auth0Provider
-    domain="dev-p63jl88r8hn0qngy.us.auth0.com"
-    clientId="qJuocD169mnwQRwYrZ7Ty8oDkNZWLoJo"
-    authorizationParams={{
-      redirect_uri: window.location.origin
-    }}
-  >
-      <body className={inter.className + " overflow-x-hidden"}>{children}</body>
+        domain="dev-p63jl88r8hn0qngy.us.auth0.com"
+        clientId="qJuocD169mnwQRwYrZ7Ty8oDkNZWLoJo"
+        authorizationParams={{
+          redirect_uri: window.location.origin + '/dashboard'
+        }}
+      >
+        <body className={inter.className + " overflow-x-hidden"}>{children}</body>
       </Auth0Provider>
     </html>
-  )
+  );
 }
