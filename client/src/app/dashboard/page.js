@@ -1,226 +1,457 @@
 "use client";
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../components/Logo";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
+import { CardTitle, CardHeader, CardContent, Card, CardDescription } from "@/components/ui/card"
+import { ResponsiveLine } from "@nivo/line"
+import { ResponsiveBar } from "@nivo/bar"
+import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
 
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-};
-const navigation = [
-  { name: "Home", href: "/", current: false },
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Students", href: "#", current: false },
-  { name: "Teachers", href: "#", current: false },
-];
-const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function Example() {
+export default function Component() {
   return (
-    <>
-      <div className='min-h-full'>
-        <Disclosure as='nav' className='bg-gray-800'>
-          {({ open }) => (
-            <>
-              <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-                <div className='flex h-16 items-center justify-between'>
-                  <div className='flex items-center'>
-                    <div className='flex-shrink-0'>
-                      <Logo />
-                    </div>
-                    <div className='hidden md:block'>
-                      <div className='ml-10 flex items-baseline space-x-4'>
-                        {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className={classNames(
-                              item.current
-                                ? "bg-gray-900 text-white"
-                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                              "rounded-md px-3 py-2 text-sm font-medium"
-                            )}
-                            aria-current={item.current ? "page" : undefined}
-                          >
-                            {item.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className='hidden md:block'>
-                    <div className='ml-4 flex items-center md:ml-6'>
-                      <button
-                        type='button'
-                        className='relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
-                      >
-                        <span className='absolute -inset-1.5' />
-                        <span className='sr-only'>View notifications</span>
-                        <BellIcon className='h-6 w-6' aria-hidden='true' />
-                      </button>
-
-                      {/* Profile dropdown */}
-                      <Menu as='div' className='relative ml-3'>
-                        <div>
-                          <Menu.Button className='relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
-                            <span className='absolute -inset-1.5' />
-                            <span className='sr-only'>Open user menu</span>
-                            <img
-                              className='h-8 w-8 rounded-full'
-                              src={user.imageUrl}
-                              alt=''
-                            />
-                          </Menu.Button>
-                        </div>
-                        <Transition
-                          as={Fragment}
-                          enter='transition ease-out duration-100'
-                          enterFrom='transform opacity-0 scale-95'
-                          enterTo='transform opacity-100 scale-100'
-                          leave='transition ease-in duration-75'
-                          leaveFrom='transform opacity-100 scale-100'
-                          leaveTo='transform opacity-0 scale-95'
-                        >
-                          <Menu.Items className='absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
-                            {userNavigation.map((item) => (
-                              <Menu.Item key={item.name}>
-                                {({ active }) => (
-                                  <a
-                                    href={item.href}
-                                    className={classNames(
-                                      active ? "bg-gray-100" : "",
-                                      "block px-4 py-2 text-sm text-gray-700"
-                                    )}
-                                  >
-                                    {item.name}
-                                  </a>
-                                )}
-                              </Menu.Item>
-                            ))}
-                          </Menu.Items>
-                        </Transition>
-                      </Menu>
-                    </div>
-                  </div>
-                  <div className='-mr-2 flex md:hidden'>
-                    {/* Mobile menu button */}
-                    <Disclosure.Button className='relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
-                      <span className='absolute -inset-0.5' />
-                      <span className='sr-only'>Open main menu</span>
-                      {open ? (
-                        <XMarkIcon
-                          className='block h-6 w-6'
-                          aria-hidden='true'
-                        />
-                      ) : (
-                        <Bars3Icon
-                          className='block h-6 w-6'
-                          aria-hidden='true'
-                        />
-                      )}
-                    </Disclosure.Button>
-                  </div>
-                </div>
-              </div>
-
-              <Disclosure.Panel className='md:hidden'>
-                <div className='space-y-1 px-2 pb-3 pt-2 sm:px-3'>
-                  {navigation.map((item) => (
-                    <Disclosure.Button
-                      key={item.name}
-                      as='a'
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "block rounded-md px-3 py-2 text-base font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </Disclosure.Button>
-                  ))}
-                </div>
-                <div className='border-t border-gray-700 pb-3 pt-4'>
-                  <div className='flex items-center px-5'>
-                    <div className='flex-shrink-0'>
-                      <img
-                        className='h-10 w-10 rounded-full'
-                        src={user.imageUrl}
-                        alt=''
-                      />
-                    </div>
-                    <div className='ml-3'>
-                      <div className='text-base font-medium leading-none text-white'>
-                        {user.name}
-                      </div>
-                      <div className='text-sm font-medium leading-none text-gray-400'>
-                        {user.email}
-                      </div>
-                    </div>
-                    <button
-                      type='button'
-                      className='relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
-                    >
-                      <span className='absolute -inset-1.5' />
-                      <span className='sr-only'>View notifications</span>
-                      <BellIcon className='h-6 w-6' aria-hidden='true' />
-                    </button>
-                  </div>
-                  <div className='mt-3 space-y-1 px-2'>
-                    {userNavigation.map((item) => (
-                      <Disclosure.Button
-                        key={item.name}
-                        as='a'
-                        href={item.href}
-                        className='block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white'
-                      >
-                        {item.name}
-                      </Disclosure.Button>
-                    ))}
-                  </div>
-                </div>
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
-
-        <header className='bg-white shadow'>
-          <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
-            <h1 className='text-3xl font-bold tracking-tight text-gray-900'>
-              Dashboard
-            </h1>
-          </div>
-        </header>
-        <main>
-          <div className='mx-auto max-w-7xl py-6 sm:px-6 lg:px-8'>
-            {/* Your content */}
+    <div className="flex min-h-screen w-full flex-col">
+      <header className="flex h-16 shrink-0 items-center border-b px-4 md:px-6">
+        <Link className="flex items-center gap-2 text-lg font-semibold md:text-base" href="#">
+          <SchoolIcon className="h-6 w-6" />
+          <span className="sr-only">Acme School</span>
+        </Link>
+        <div className="ml-auto flex items-center gap-4">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="rounded-full" size="icon" variant="ghost">
+                <img
+                  alt="Avatar"
+                  className="rounded-full"
+                  height="32"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "32/32",
+                    objectFit: "cover",
+                  }}
+                  width="32"
+                />
+                <span className="sr-only">Toggle user menu</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Logout</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </header>
+      <div className="flex flex-1">
+        <div className="hidden h-full border-r px-4 py-6 md:flex md:flex-col md:gap-4">
+        <Link
+            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            href="#"
+          >
+            <SchoolIcon className="h-5 w-5" />
+            School
+          </Link>
+          <Link
+            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            href="#"
+          >
+            <UsersIcon className="h-5 w-5" />
+            Students
+          </Link>
+          <Link
+            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            href="#"
+          >
+            <CalendarIcon className="h-5 w-5" />
+            Attendance
+          </Link>
+          <Link
+            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            href="#"
+          >
+            <BookIcon className="h-5 w-5" />
+            Grades
+          </Link>
+          <Link
+            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            href="#"
+          >
+            <FileIcon className="h-5 w-5" />
+            Reports
+          </Link>
+        </div>
+        <main className="flex-1 p-6">
+          <div className="grid gap-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between pb-2">
+                  <CardTitle className="text-sm font-medium">Total Students</CardTitle>
+                  <UsersIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold">1,234</div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">+5% from last year</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between pb-2">
+                  <CardTitle className="text-sm font-medium">Average Attendance</CardTitle>
+                  <CalendarIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold">92%</div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">+2% from last year</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between pb-2">
+                  <CardTitle className="text-sm font-medium">Average GPA</CardTitle>
+                  <BookIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold">3.7</div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">+0.1 from last year</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between pb-2">
+                  <CardTitle className="text-sm font-medium">Graduation Rate</CardTitle>
+                  <GraduationCapIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold">95%</div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">+2% from last year</p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Attendance Overview</CardTitle>
+                  <CardDescription>Attendance rates for the current school year.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <LineChart className="aspect-[9/4]" />
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Grade Distribution</CardTitle>
+                  <CardDescription>Grade distribution for the current school year.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <BarChart className="aspect-[9/4]" />
+                </CardContent>
+              </Card>
+            </div>
+            <Card>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Student</TableHead>
+                    <TableHead>Grade</TableHead>
+                    <TableHead>Attendance</TableHead>
+                    <TableHead className="text-right">GPA</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Kwame Mensah</TableCell>
+                    <TableCell>A</TableCell>
+                    <TableCell>95%</TableCell>
+                    <TableCell className="text-right">4.0</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Kelvin Duobu</TableCell>
+                    <TableCell>B+</TableCell>
+                    <TableCell>92%</TableCell>
+                    <TableCell className="text-right">3.8</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Michael Yeboah</TableCell>
+                    <TableCell>C</TableCell>
+                    <TableCell>85%</TableCell>
+                    <TableCell className="text-right">3.0</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Emily Adjei</TableCell>
+                    <TableCell>A-</TableCell>
+                    <TableCell>90%</TableCell>
+                    <TableCell className="text-right">3.9</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">David Agbenu</TableCell>
+                    <TableCell>B</TableCell>
+                    <TableCell>88%</TableCell>
+                    <TableCell className="text-right">3.5</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </Card>
           </div>
         </main>
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
-// import React from 'react'
-// import Profile from "../Profile/page"
+function BarChart(props) {
+  return (
+    <div {...props}>
+      <ResponsiveBar
+        data={[
+          { name: "Jan", count: 111 },
+          { name: "Feb", count: 157 },
+          { name: "Mar", count: 129 },
+          { name: "Apr", count: 150 },
+          { name: "May", count: 119 },
+          { name: "Jun", count: 72 },
+        ]}
+        keys={["count"]}
+        indexBy="name"
+        margin={{ top: 0, right: 0, bottom: 40, left: 40 }}
+        padding={0.3}
+        colors={["#2563eb"]}
+        axisBottom={{
+          tickSize: 0,
+          tickPadding: 16,
+        }}
+        axisLeft={{
+          tickSize: 0,
+          tickValues: 4,
+          tickPadding: 16,
+        }}
+        gridYValues={4}
+        theme={{
+          tooltip: {
+            chip: {
+              borderRadius: "9999px",
+            },
+            container: {
+              fontSize: "12px",
+              textTransform: "capitalize",
+              borderRadius: "6px",
+            },
+          },
+          grid: {
+            line: {
+              stroke: "#f3f4f6",
+            },
+          },
+        }}
+        tooltipLabel={({ id }) => `${id}`}
+        enableLabel={false}
+        role="application"
+        ariaLabel="A bar chart showing data"
+      />
+    </div>
+  )
+}
 
-// function page() {
-//   return (
-//     <div><Profile/></div>
-//   )
-// }
 
-// export default page
+function BookIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+    </svg>
+  )
+}
+
+
+function CalendarIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M8 2v4" />
+      <path d="M16 2v4" />
+      <rect width="18" height="18" x="3" y="4" rx="2" />
+      <path d="M3 10h18" />
+    </svg>
+  )
+}
+
+
+function FileIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+    </svg>
+  )
+}
+
+
+function GraduationCapIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+      <path d="M22 10v6" />
+      <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+    </svg>
+  )
+}
+
+
+function LineChart(props) {
+  return (
+    <div {...props}>
+      <ResponsiveLine
+        data={[
+          {
+            id: "Desktop",
+            data: [
+              { x: "Jan", y: 43 },
+              { x: "Feb", y: 137 },
+              { x: "Mar", y: 61 },
+              { x: "Apr", y: 145 },
+              { x: "May", y: 26 },
+              { x: "Jun", y: 154 },
+            ],
+          },
+          {
+            id: "Mobile",
+            data: [
+              { x: "Jan", y: 60 },
+              { x: "Feb", y: 48 },
+              { x: "Mar", y: 177 },
+              { x: "Apr", y: 78 },
+              { x: "May", y: 96 },
+              { x: "Jun", y: 204 },
+            ],
+          },
+        ]}
+        margin={{ top: 10, right: 10, bottom: 40, left: 40 }}
+        xScale={{
+          type: "point",
+        }}
+        yScale={{
+          type: "linear",
+        }}
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+          tickSize: 0,
+          tickPadding: 16,
+        }}
+        axisLeft={{
+          tickSize: 0,
+          tickValues: 5,
+          tickPadding: 16,
+        }}
+        colors={["#2563eb", "#e11d48"]}
+        pointSize={6}
+        useMesh={true}
+        gridYValues={6}
+        theme={{
+          tooltip: {
+            chip: {
+              borderRadius: "9999px",
+            },
+            container: {
+              fontSize: "12px",
+              textTransform: "capitalize",
+              borderRadius: "6px",
+            },
+          },
+          grid: {
+            line: {
+              stroke: "#f3f4f6",
+            },
+          },
+        }}
+        role="application"
+      />
+    </div>
+  )
+}
+
+
+function SchoolIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M14 22v-4a2 2 0 1 0-4 0v4" />
+      <path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2" />
+      <path d="M18 5v17" />
+      <path d="m4 6 8-4 8 4" />
+      <path d="M6 5v17" />
+      <circle cx="12" cy="9" r="2" />
+    </svg>
+  )
+}
+
+
+function UsersIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  )
+}
