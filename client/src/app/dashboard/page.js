@@ -6,38 +6,47 @@ import { CardTitle, CardHeader, CardContent, Card, CardDescription } from "@/com
 import { ResponsiveLine } from "@nivo/line"
 import { ResponsiveBar } from "@nivo/bar"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
+import Logo from "../components/Logo";
+import { useAuth0 } from "@auth0/auth0-react";
+import LogoutButton from "../logout/page";
+
+
 
 export default function Component() {
+  const { user, isAuthenticated, isLoading } = useAuth0();
   return (
-    <div className="flex min-h-screen w-full flex-col">
+    isAuthenticated && (
+    <div className="flex min-h-screen w-full flex-col">      
       <header className="flex h-16 shrink-0 items-center border-b px-4 md:px-6">
         <Link className="flex items-center gap-2 text-lg font-semibold md:text-base" href="#">
-          <SchoolIcon className="h-6 w-6" />
+          <Logo className="" size={2} />
           <span className="sr-only">Acme School</span>
         </Link>
         <div className="ml-auto flex items-center gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button className="rounded-full" size="icon" variant="ghost">
-                <img
-                  alt="Avatar"
+              <Button className="rounded-full" size="icon" variant="ghost">                
+                <img src={user.picture} alt={user.name}
                   className="rounded-full"
-                  height="32"
-                  src="/placeholder.svg"
+                  height="32"                
                   style={{
                     aspectRatio: "32/32",
                     objectFit: "cover",
                   }}
-                  width="32"
-                />
+                  width="32"/>
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuContent align="end ">
+              <div className="lg:hidden flex flex-col">
+            <DropdownMenuItem><Link href="/dashboard">School</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/students">students</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="#">Attendance</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="#">Grades</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="#">Reports</Link></DropdownMenuItem>              
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              </div>
+              <DropdownMenuItem><LogoutButton/></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -45,7 +54,7 @@ export default function Component() {
       <div className="flex flex-1">
         <div className="hidden h-full border-r px-4 py-6 md:flex md:flex-col md:gap-4">
         <Link
-            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium bg-gray-100 dark:bg-gray-800"
             href="#"
           >
             <SchoolIcon className="h-5 w-5" />
@@ -53,7 +62,7 @@ export default function Component() {
           </Link>
           <Link
             className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
-            href="#"
+            href="/students"
           >
             <UsersIcon className="h-5 w-5" />
             Students
@@ -79,8 +88,13 @@ export default function Component() {
             <FileIcon className="h-5 w-5" />
             Reports
           </Link>
+
+          <DropdownMenuSeparator />
+          <LogoutButton/>
+          
         </div>
         <main className="flex-1 p-6">
+        <h2 className="flex text-3xl mb-4"><p>Welcome,</p>{user.name}</h2>
           <div className="grid gap-6">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               <Card>
@@ -193,7 +207,10 @@ export default function Component() {
       </div>
     </div>
   )
+)
 }
+
+
 
 function BarChart(props) {
   return (
