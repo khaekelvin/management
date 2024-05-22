@@ -108,7 +108,7 @@ return (
         </div>
         <section>
                 <div>
-                    <div className="flex flex-col px-3 mt-10 space-y-6">
+                    <div className="flex flex-col px-3 mt-7 space-y-6">
                         <div className="space-y-2">
                             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Student Information</h2>
                             <p className="max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
