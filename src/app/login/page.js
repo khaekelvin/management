@@ -15,7 +15,7 @@ const LoginButton = () => {
   <>
   <Header/>
   <div className="max-w-5xl mx-auto">  
-  <LogoutButton/>
+  <LogoutButton className=""/>
   <button onClick={() => loginWithRedirect()}>Log In</button>  
   </div> 
   </>
