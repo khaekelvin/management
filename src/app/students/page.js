@@ -15,18 +15,17 @@ import LogoutButton from "../logout/page";
 export default function Component() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 const studentData = [
-    { name: "John Doe", grade: "A", attendance: "95%", absences: 3, tardies: 1 },
-    { name: "Jane Smith", grade: "B+", attendance: "92%", absences: 4, tardies: 2 },
+    { name: "Kwame Mensah", grade: "A", attendance: "95%", absences: 3, tardies: 1 },
+    { name: "Kelvin Daba", grade: "B+", attendance: "92%", absences: 4, tardies: 2 },
     { name: "Michael Johnson", grade: "C", attendance: "85%", absences: 6, tardies: 4 },
-    { name: "Emily Davis", grade: "A-", attendance: "97%", absences: 1, tardies: 0 },
-    { name: "David Lee", grade: "B", attendance: "90%", absences: 5, tardies: 3 },
-    { name: "Sarah Kim", grade: "A+", attendance: "100%", absences: 0, tardies: 0 },
-    { name: "Sarah Kim", grade: "A+", attendance: "100%", absences: 0, tardies: 0 },
-    { name: "Sarah Kim", grade: "A+", attendance: "100%", absences: 0, tardies: 0 },
-    { name: "Sarah Kim", grade: "A+", attendance: "100%", absences: 0, tardies: 0 },
-    { name: "Sarah Kim", grade: "A+", attendance: "100%", absences: 0, tardies: 0 },
-    { name: "Sarah Kim", grade: "A+", attendance: "100%", absences: 0, tardies: 0 },
-    { name: "Sarah Kim", grade: "A+", attendance: "100%", absences: 0, tardies: 0 },
+    { name: "Omo Yeboah", grade: "A-", attendance: "97%", absences: 1, tardies: 0 },
+    { name: "Emily Adjei", grade: "B", attendance: "90%", absences: 5, tardies: 3 },
+    { name: "David Agbenu", grade: "A+", attendance: "100%", absences: 0, tardies: 0 },
+    { name: "Osborn Gbekwe", grade: "B+", attendance: "100%", absences: 0, tardies: 0 },
+    { name: "Sarah Lebe", grade: "C", attendance: "100%", absences: 0, tardies: 0 },
+    { name: "Yanis Obi", grade: "A", attendance: "100%", absences: 0, tardies: 0 },
+    { name: "Peter Kim", grade: "D", attendance: "100%", absences: 0, tardies: 0 },
+    
 ];
 
 return (
@@ -115,7 +114,7 @@ return (
                                 Access and manage all the details about your students in one place.
                             </p>
                         </div>
-                        <div className="grid w-full  gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+                        <div className="grid w-full  gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                             {studentData.map((student, index) => (
                                 <Card key={index}>
                                     <CardHeader>
