@@ -1,7 +1,6 @@
 "use client";
 import Header from "../components/Header";
 import { FaHubspot } from "react-icons/fa";
-import AnimatedListDemo from "@/components/magicui/list"
 
 const stats = [
   { name: "Schools", value: "2 Thousand" },
@@ -69,8 +68,6 @@ export default function About() {
           {/* <FaHubspot className=' mx-auto h-[450px] w-auto hidden sm:flex' /> */}
 
 
-
-<AnimatedListDemo/>
 
 
 
