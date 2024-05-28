@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
-import { CardTitle, CardHeader, CardContent, Card, CardDescription, CardFooter } from "@/components/ui/card"
+import { Button } from "../components/ui/button"
+import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from "../components/ui/dropdown-menu"
+import { CardTitle, CardHeader, CardContent, Card, CardDescription, CardFooter } from "../components/ui/card"
 import { ResponsiveLine } from "@nivo/line"
 import { ResponsiveBar } from "@nivo/bar"
-import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
+import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "../components/ui/table"
 import Logo from "../components/Logo";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../logout/page";
