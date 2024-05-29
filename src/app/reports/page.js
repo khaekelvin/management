@@ -1,10 +1,9 @@
+
 "use client";
 import Link from "next/link"
 import { Button } from "../components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from "../components/ui/dropdown-menu"
 import { CardTitle, CardHeader, CardContent, Card, CardDescription } from "../components/ui/card"
-import { ResponsiveLine } from "@nivo/line"
-import { ResponsiveBar } from "@nivo/bar"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "../components/ui/table"
 import Logo from "../components/Logo";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -40,9 +39,9 @@ export default function Component() {
             <DropdownMenuContent align="end ">
               <div className="lg:hidden flex flex-col">
             <DropdownMenuItem><Link href="/dashboard">School</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="/students">students</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/students">students</Link></DropdownMenuItem>        
               <DropdownMenuItem><Link href="#">Grades</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="/reports">Reports</Link></DropdownMenuItem>              
+              <DropdownMenuItem><Link href="#">Reports</Link></DropdownMenuItem>              
               <DropdownMenuSeparator />
               </div>
               <DropdownMenuItem><LogoutButton/></DropdownMenuItem>
@@ -53,8 +52,8 @@ export default function Component() {
       <div className="flex flex-1">
         <div className="hidden h-full border-r px-4 py-6 md:flex md:flex-col md:gap-4">
         <Link
-            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium bg-gray-100 dark:bg-gray-800"
-            href="#"
+            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            href="/dashboard"
           >
             <SchoolIcon className="h-5 w-5" />
             School
@@ -74,7 +73,7 @@ export default function Component() {
             Grades
           </Link>
           <Link
-            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium  bg-gray-100 dark:bg-gray-800"
             href="/reports"
           >
             <FileIcon className="h-5 w-5" />
@@ -85,175 +84,169 @@ export default function Component() {
           <LogoutButton/>
           
         </div>
-        <main className="flex-1 p-6">
-        <h2 className="flex text-3xl mb-4"><p>Welcome,</p>{user.name}</h2>
-          <div className="grid gap-6">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between pb-2">
-                  <CardTitle className="text-sm font-medium">Total Students</CardTitle>
-                  <UsersIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">1,234</div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">+5% from last year</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between pb-2">
-                  <CardTitle className="text-sm font-medium">Average Attendance</CardTitle>
-                  <CalendarIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">92%</div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">+2% from last year</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between pb-2">
-                  <CardTitle className="text-sm font-medium">Average GPA</CardTitle>
-                  <BookIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">3.7</div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">+0.1 from last year</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between pb-2">
-                  <CardTitle className="text-sm font-medium">Graduation Rate</CardTitle>
-                  <GraduationCapIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">95%</div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">+2% from last year</p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Attendance Overview</CardTitle>
-                  <CardDescription>Attendance rates for the current school year.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <LineChart className="aspect-[9/4]" />
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Grade Distribution</CardTitle>
-                  <CardDescription>Grade distribution for the current school year.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <BarChart className="aspect-[9/4]" />
-                </CardContent>
-              </Card>
-            </div>
-            <Card>
+        <main className="container mx-auto px-4 md:px-6 py-8">
+      <div className="grid gap-6">
+        <div>
+          <h1 className="text-2xl font-bold md:text-4xl">School Performance Report</h1>
+          <p className="text-gray-500 dark:text-gray-400 w-[20rem] md:w-[30rem]">Overview of key metrics and student performance data.</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-4 max-w-[30rem] md:max-w-none">
+          <Card>
+            <CardHeader className="flex items-center justify-between">
+              <CardTitle>Total Students</CardTitle>
+              <UsersIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-4xl font-bold">1,234</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="flex items-center justify-between">
+              <CardTitle>Total Teachers</CardTitle>
+              <UsersIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-4xl font-bold">78</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="flex items-center justify-between">
+              <CardTitle>Total Classes</CardTitle>
+              <BookOpenIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-4xl font-bold">52</div>
+            </CardContent>
+          </Card>
+        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle>Student Performance</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="relative w-full overflow-auto">
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Student</TableHead>
+                    <TableHead className="w-[100px]">Student</TableHead>
                     <TableHead>Grade</TableHead>
                     <TableHead>Attendance</TableHead>
-                    <TableHead className="text-right">GPA</TableHead>
+                    <TableHead>Behavior</TableHead>
+                    <TableHead className="text-right">Actions</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell className="font-medium">Kwame Mensah</TableCell>
+                    <TableCell className="font-medium">John Doe</TableCell>
                     <TableCell>A</TableCell>
                     <TableCell>95%</TableCell>
-                    <TableCell className="text-right">4.0</TableCell>
+                    <TableCell>Excellent</TableCell>
+                    <TableCell className="text-right">
+                      <Button size="icon" variant="ghost">
+                        <DeleteIcon className="w-5 h-5" />
+                        <span className="sr-only">Edit</span>
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">Kelvin Duobu</TableCell>
+                    <TableCell className="font-medium">Jane Smith</TableCell>
                     <TableCell>B+</TableCell>
                     <TableCell>92%</TableCell>
-                    <TableCell className="text-right">3.8</TableCell>
+                    <TableCell>Good</TableCell>
+                    <TableCell className="text-right">
+                      <Button size="icon" variant="ghost">
+                        <DeleteIcon className="w-5 h-5" />
+                        <span className="sr-only">Edit</span>
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">Michael Yeboah</TableCell>
+                    <TableCell className="font-medium">Michael Johnson</TableCell>
                     <TableCell>C</TableCell>
                     <TableCell>85%</TableCell>
-                    <TableCell className="text-right">3.0</TableCell>
+                    <TableCell>Average</TableCell>
+                    <TableCell className="text-right">
+                      <Button size="icon" variant="ghost">
+                        <DeleteIcon className="w-5 h-5" />
+                        <span className="sr-only">Edit</span>
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">Emily Adjei</TableCell>
+                    <TableCell className="font-medium">Emily Davis</TableCell>
                     <TableCell>A-</TableCell>
-                    <TableCell>90%</TableCell>
-                    <TableCell className="text-right">3.9</TableCell>
+                    <TableCell>98%</TableCell>
+                    <TableCell>Excellent</TableCell>
+                    <TableCell className="text-right">
+                      <Button size="icon" variant="ghost">
+                        <DeleteIcon className="w-5 h-5" />
+                        <span className="sr-only">Edit</span>
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">David Agbenu</TableCell>
+                    <TableCell className="font-medium">David Wilson</TableCell>
                     <TableCell>B</TableCell>
-                    <TableCell>88%</TableCell>
-                    <TableCell className="text-right">3.5</TableCell>
+                    <TableCell>90%</TableCell>
+                    <TableCell>Good</TableCell>
+                    <TableCell className="text-right">
+                      <Button size="icon" variant="ghost">
+                        <DeleteIcon className="w-5 h-5" />
+                        <span className="sr-only">Edit</span>
+                      </Button>
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
-            </Card>
-          </div>
-        </main>
+            </div>
+          </CardContent>
+        </Card>
       </div>
+    </main>     </div>
     </div>
   )
 )
 }
 
-
-
-function BarChart(props) {
+function BookOpenIcon(props) {
   return (
-    <div {...props}>
-      <ResponsiveBar
-        data={[
-          { name: "Jan", count: 111 },
-          { name: "Feb", count: 157 },
-          { name: "Mar", count: 129 },
-          { name: "Apr", count: 150 },
-          { name: "May", count: 119 },
-          { name: "Jun", count: 72 },
-        ]}
-        keys={["count"]}
-        indexBy="name"
-        margin={{ top: 0, right: 0, bottom: 40, left: 40 }}
-        padding={0.3}
-        colors={["#2563eb"]}
-        axisBottom={{
-          tickSize: 0,
-          tickPadding: 16,
-        }}
-        axisLeft={{
-          tickSize: 0,
-          tickValues: 4,
-          tickPadding: 16,
-        }}
-        gridYValues={4}
-        theme={{
-          tooltip: {
-            chip: {
-              borderRadius: "9999px",
-            },
-            container: {
-              fontSize: "12px",
-              textTransform: "capitalize",
-              borderRadius: "6px",
-            },
-          },
-          grid: {
-            line: {
-              stroke: "#f3f4f6",
-            },
-          },
-        }}
-        tooltipLabel={({ id }) => `${id}`}
-        enableLabel={false}
-        role="application"
-        ariaLabel="A bar chart showing data"
-      />
-    </div>
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+    </svg>
+  )
+}
+
+
+function DeleteIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M20 5H9l-7 7 7 7h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z" />
+      <line x1="18" x2="12" y1="9" y2="15" />
+      <line x1="12" x2="18" y1="9" y2="15" />
+    </svg>
   )
 }
 
@@ -317,28 +310,6 @@ function FileIcon(props) {
     >
       <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
       <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-    </svg>
-  )
-}
-
-
-function GraduationCapIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
-      <path d="M22 10v6" />
-      <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
     </svg>
   )
 }

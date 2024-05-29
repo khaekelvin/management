@@ -54,10 +54,9 @@ return (
             <DropdownMenuContent align="end">
             <div className="lg:hidden flex flex-col">
             <DropdownMenuItem><Link href="/dashboard">School</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="/students">students</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#">Attendance</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/students">students</Link></DropdownMenuItem>              
               <DropdownMenuItem><Link href="#">Grades</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#">Reports</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/reports">Reports</Link></DropdownMenuItem>
               <DropdownMenuSeparator />
               </div>
               <DropdownMenuItem><LogoutButton/></DropdownMenuItem>
@@ -80,14 +79,7 @@ return (
           >
             <UsersIcon className="h-5 w-5" />
             Students
-          </Link>
-          <Link
-            className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
-            href="#"
-          >
-            <CalendarIcon className="h-5 w-5" />
-            Attendance
-          </Link>
+          </Link>          
           <Link
             className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
             href="#"
@@ -97,7 +89,7 @@ return (
           </Link>
           <Link
             className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
-            href="#"
+            href="/reports"
           >
             <FileIcon className="h-5 w-5" />
             Reports
