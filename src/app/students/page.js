@@ -55,7 +55,7 @@ return (
             <div className="lg:hidden flex flex-col">
             <DropdownMenuItem><Link href="/dashboard">School</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="/students">students</Link></DropdownMenuItem>              
-              <DropdownMenuItem><Link href="#">Grades</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/courses">Courses</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="/reports">Reports</Link></DropdownMenuItem>
               <DropdownMenuSeparator />
               </div>
@@ -82,10 +82,10 @@ return (
           </Link>          
           <Link
             className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
-            href="#"
+            href="/courses"
           >
             <BookIcon className="h-5 w-5" />
-            Grades
+            Courses
           </Link>
           <Link
             className="flex items-center gap-2 rounded-md py-2 px-3 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
