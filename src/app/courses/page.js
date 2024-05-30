@@ -94,7 +94,7 @@ export default function Component() {
 
           </div>
 
-          <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
+          <main className="flex flex-1 flex-col gap-4 px-2 md:gap-8 md:p-6">
             <div className="flex items-center">
               <h1 className="font-semibold text-lg md:text-2xl">Courses</h1>
 
@@ -127,12 +127,13 @@ export default function Component() {
                               "Introduction to Computer Science" is a foundational course designed for beginners to learn core computer science concepts and programming skills.
 
                               <h1 className="text-black font-bold my-1">Learning Objectives</h1>
+                              <div className="text-left px-2 mx-auto w-80">
                               <li>Understand fundamental computer science concepts.</li>
                               <li>Develop programming skills in Python.</li>
                               <li>Apply computational thinking for problem-solving.</li>
                               <li>Explore applications of computer science in various fields.</li>
                               <li>Collaborate effectively on software projects.</li>
-
+                              </div>
                             </DialogDescription>
                           </DialogHeader>
                         </DialogContent>
@@ -167,12 +168,13 @@ export default function Component() {
                               "Data Structures and Algorithms" is an intermediate-level course that builds on foundational programming knowledge to explore essential data structures and algorithms.
 
                               <h1 className="text-black font-bold my-1">Learning Objectives</h1>
+                              <div className="text-left px-2 mx-auto w-80">
                               <li>Understand and implement core data structures.</li>
                               <li>Analyze and apply various algorithms.</li>
                               <li>Evaluate algorithm efficiency using Big O notation.</li>
                               <li>Solve complex problems using appropriate algorithms.</li>
                               <li>Develop skills for optimizing and debugging code.</li>
-
+</div>
                             </DialogDescription>
                           </DialogHeader>
                         </DialogContent>
@@ -203,15 +205,16 @@ export default function Component() {
                             <DialogTitle>Web Development Fundamentals</DialogTitle>
                             <DialogDescription>
                               <p className="text-black font-bold my-1">Course Overview</p>
-                              "Web Development Fundamentals" is an introductory course designed to teach students the essential skills and technologies needed to build modern, responsive websites and web applications. 
+                              "Web Development Fundamentals" is an introductory course designed to teach students the essential skills and technologies needed to build modern, responsive websites and web applications.
 
                               <h1 className="text-black font-bold my-1">Learning Objectives</h1>
+                              <div className="text-left px-2 mx-auto w-80">
                               <li>Understand the basics of web development and the structure of web applications.</li>
                               <li>Create web pages using HTML for content, CSS for styling, and JavaScript for interactivity.</li>
                               <li>Develop responsive web designs that work on various devices.</li>
                               <li>Learn about web development tools and frameworks.</li>
                               <li>Deploy and maintain web applications.</li>
-
+</div>
                             </DialogDescription>
                           </DialogHeader>
                         </DialogContent>
@@ -246,12 +249,13 @@ export default function Component() {
                               "Mobile App Development" is an introductory course designed to teach students the essential skills and technologies needed to create mobile applications for iOS and Android platforms.
 
                               <h1 className="text-black font-bold my-1">Learning Objectives</h1>
+                              <div className="text-left px-2 mx-auto w-80">
                               <li>Understand the fundamentals of mobile app development.</li>
                               <li>Develop mobile applications for iOS and Android platforms.</li>
                               <li>Learn to use development frameworks and tools.</li>
                               <li>Learn about web development tools and frameworks.</li>
                               <li>Deploy and maintain mobile applications.</li>
-
+                              </div>
                             </DialogDescription>
                           </DialogHeader>
                         </DialogContent>
