@@ -13,7 +13,7 @@ export default function About() {
   return (
     <div>
       <Header />
-      <div className="relative isolate overflow-hidden py-24 sm:py-32">
+      <div className="relative isolate overflow-hidden py-24 sm:py-32 mt-0 xl:mt-32">
         <div
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
           aria-hidden="true"
@@ -69,7 +69,7 @@ export default function About() {
                 </dl>
               </div>
             </div>
-            {/* <FaHubspot className=' mx-auto h-[450px] w-auto hidden sm:flex' /> */}
+            <FaHubspot className=" mx-auto h-[450px] w-auto hidden xl:flex" />
           </div>
         </div>
       </div>
