@@ -64,16 +64,18 @@ const LoginButton = () => {
           </BoxReveal>
 
           <BoxReveal boxColor={"#5046e6"} duration={0.1}>
-            <div className="max-w-5xl mx-auto flex flex-col justify-center px-2">
-              <div className="flex sm:hidden mx-auto w-[22rem]">
-                <BiBeamDemo />
+            <div className="max-w-4xl">
+              <div className=" mx-auto flex flex-col justify-centers">
+                <div className="flex sm:hidden mx-auto w-[22rem]">
+                  <BiBeamDemo />
+                </div>
+                <Button
+                  onClick={() => loginWithRedirect()}
+                  className="mt-[1.6rem] bg-[#5046e6] rounded-full w-[20rem] mx-auto font-bold sm:px-40"
+                >
+                  Log In
+                </Button>
               </div>
-              <Button
-                onClick={() => loginWithRedirect()}
-                className="mt-[1.6rem] bg-[#5046e6] rounded-full w-full mx-auto font-bold"
-              >
-                Log In
-              </Button>
             </div>
           </BoxReveal>
         </div>
