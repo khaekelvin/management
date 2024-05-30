@@ -1,12 +1,13 @@
 "use client";
 import Header from "../components/Header";
-import Logo from "../components/Logo";
-import { FaHubspot } from "react-icons/fa";
 import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "../logout/page";
 import BoxReveal from "../components/magicui/box-reveal";
 import { Button } from "../components/ui/button";
 import AnimatedBeamMultipleInputDemo from "../beam";
+import BiBeamDemo from "../biline";
+
+import { IoSchoolOutline } from "react-icons/io5";
+import { CiServer } from "react-icons/ci";
 
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
@@ -18,20 +19,20 @@ const LoginButton = () => {
       <Header />
       <div className="max-w-5xl mx-auto flex justify-center px-3 lg:mt-20">
         <div className="max-w-[32rem] overflow-hidden">
-          <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+          <BoxReveal boxColor={"#5046e6"} duration={0.1}>
             <p className="text-[3.5rem] font-semibold">
-              School Flow<span className="text-[#5046e6]">.</span>
+              School Flow<span className="text-[#]">.</span>
             </p>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+          <BoxReveal boxColor={"#5046e6"} duration={0.1}>
             <h2 className="mt-[.5rem] text-[1rem]">
               A School management System for{" "}
-              <span className="text-[#5046e6]">Schools.</span>
+              <span className="text-[#]">Schools.</span>
             </h2>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+          <BoxReveal boxColor={"#5046e6"} duration={0.1}>
             <div className="mt-[1.5rem]">
               <div>
                 Experience a new era of school administration with SchoolFlow.
@@ -62,11 +63,14 @@ const LoginButton = () => {
             </div>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+          <BoxReveal boxColor={"#5046e6"} duration={0.1}>
             <div className="">
+              <div className="flex sm:hidden w-[20rem] mx-auto">
+                <BiBeamDemo />
+              </div>
               <Button
                 onClick={() => loginWithRedirect()}
-                className="mt-[1.6rem] bg-[#5046e6] rounded-full px-20"
+                className="mt-[1.6rem] bg-[#5046e6] rounded-full px-40 font-bold"
               >
                 Log In
               </Button>
