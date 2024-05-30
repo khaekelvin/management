@@ -42,10 +42,10 @@ export default function About() {
           <div className="flex">
             <div>
               <div className="mx-auto max-w-2xl lg:mx-0">
-                <h2 className="text-5xl font-bold tracking-tight sm:text-8xl">
+                <h2 className="text-4xl font-bold tracking-tight sm:text-8xl">
                   <WordRotateDemo />
                 </h2>
-                <p className="mt-10 text-xl sm:text-2xl leading-9">
+                <p className="mt-7 text-lg sm:text-2xl leading-9">
                   At SchoolFlow, we are dedicated to providing innovative
                   solutions for educational institutions to enhance the learning
                   experience and streamline administrative processes. We believe
