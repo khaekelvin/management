@@ -267,9 +267,9 @@ export default function Component() {
             </div>
             <div className="flex items-center">
               <h1 className="font-semibold text-lg md:text-2xl">Students</h1>
-              <Button className="ml-auto" size="sm">
+              {/* <Button className="ml-auto" size="sm">
                 Add Student
-              </Button>
+              </Button> */}
             </div>
             <div className="border shadow-sm rounded-lg">
               <Table>

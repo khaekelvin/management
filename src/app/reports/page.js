@@ -84,7 +84,7 @@ export default function Component() {
           <LogoutButton/>
           
         </div>
-        <main className="w-full px-4 pt-2 p-0 md:px-6">
+        <main className="w-full px-4 pt-6 p-0 md:px-6">
       <div>
         <div>
           <h1 className="text-3xl font-bold md:text-4xl">School Performance Report</h1>
