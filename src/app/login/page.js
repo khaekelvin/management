@@ -16,20 +16,20 @@ const LoginButton = () => {
       <Header />
       <div className="max-w-5xl mx-auto flex justify-center px-3 mt-20 lg:mt-40">
         <div className="max-w-[32rem] overflow-hidden">
-          <BoxReveal boxColor={"#5046e6"} duration={0.1}>
+          <BoxReveal boxColor={"#5046e6"} duration={0.3}>
             <p className="text-[3.5rem] font-semibold">
               School Flow<span className="text-[#]">.</span>
             </p>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#5046e6"} duration={0.1}>
+          <BoxReveal boxColor={"#5046e6"} duration={0.3}>
             <h2 className="mt-[.5rem] text-[1rem]">
               A School management System for{" "}
               <span className="text-[#]">Schools.</span>
             </h2>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#5046e6"} duration={0.1}>
+          <BoxReveal boxColor={"#5046e6"} duration={0.3}>
             <div className="mt-[1.5rem]">
               <div>
                 Experience a new era of school administration with SchoolFlow.
@@ -50,17 +50,17 @@ const LoginButton = () => {
                 </li>
                 <li className="font-semibold text-[#5046e6]">
                   {" "}
-                  Performance Analytics and Progress Tracking
+                  Performance Analytics
                 </li>
                 <li className="font-semibold text-[#5046e6]">
                   {" "}
-                  Student Profile Management
+                  Progress Tracking
                 </li>
               </div>
             </div>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#5046e6"} duration={0.1}>
+          <BoxReveal boxColor={"#5046e6"} duration={0.3}>
             <div className="max-w-4xl">
               <div className=" mx-auto flex flex-col justify-centers">
                 <div className="flex sm:hidden mx-auto w-[22rem]">

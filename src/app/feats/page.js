@@ -50,7 +50,7 @@ export default function Feats() {
                 <p className=" font-semibold leading-7 text-indigo-600 text-2xl ">
                   School<span className="text-amber-500">Flow</span>
                 </p>
-                <h1 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                <h1 className="mt-2 text-xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   A Better Management System
                 </h1>
                 <p className="mt-6 text-xl leading-8 text-gray-700">
@@ -72,7 +72,7 @@ export default function Feats() {
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
               <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-                <h1 className="text-lg to-black">Key Benefits</h1>
+                <h1 className="text-2xl font-bold to-black">Key Benefits</h1>
                 <ul role="list" className="mt-8 space-y-8 text-gray-600">
                   <li className="flex gap-x-3">
                     <CloudArrowUpIcon
