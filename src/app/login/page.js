@@ -6,9 +6,6 @@ import { Button } from "../components/ui/button";
 import AnimatedBeamMultipleInputDemo from "../beam";
 import BiBeamDemo from "../biline";
 
-import { IoSchoolOutline } from "react-icons/io5";
-import { CiServer } from "react-icons/ci";
-
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
   const onExecutePostLogin = async (event, api) => {
@@ -17,7 +14,7 @@ const LoginButton = () => {
   return (
     <>
       <Header />
-      <div className="max-w-5xl mx-auto flex justify-center px-3 lg:mt-20">
+      <div className="max-w-5xl mx-auto flex justify-center px-3 mt-20 lg:mt-40">
         <div className="max-w-[32rem] overflow-hidden">
           <BoxReveal boxColor={"#5046e6"} duration={0.1}>
             <p className="text-[3.5rem] font-semibold">

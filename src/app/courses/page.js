@@ -1,11 +1,30 @@
 "use client";
-import Link from "next/link"
-import { Button } from "../components/ui/button"
-import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from "../components/ui/dropdown-menu"
-import { CardTitle, CardHeader, CardContent, Card, CardDescription } from "../components/ui/card"
-import { ResponsiveLine } from "@nivo/line"
-import { ResponsiveBar } from "@nivo/bar"
-import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "../components/ui/table"
+import Link from "next/link";
+import { Button } from "../components/ui/button";
+import {
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuContent,
+  DropdownMenu,
+} from "../components/ui/dropdown-menu";
+import {
+  CardTitle,
+  CardHeader,
+  CardContent,
+  Card,
+  CardDescription,
+} from "../components/ui/card";
+import { ResponsiveLine } from "@nivo/line";
+import { ResponsiveBar } from "@nivo/bar";
+import {
+  TableHead,
+  TableRow,
+  TableHeader,
+  TableCell,
+  TableBody,
+  Table,
+} from "../components/ui/table";
 import Logo from "../components/Logo";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../logout/page";
@@ -16,9 +35,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../components/ui/dialog"
-import { AvatarImage, AvatarFallback, Avatar } from "../components/ui/avatar"
-
+} from "../components/ui/dialog";
+import { AvatarImage, AvatarFallback, Avatar } from "../components/ui/avatar";
 
 export default function Component() {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -26,7 +44,10 @@ export default function Component() {
     isAuthenticated && (
       <div className="flex min-h-screen w-full flex-col">
         <header className="flex h-16 shrink-0 items-center border-b px-4 md:px-6">
-          <Link className="flex items-center gap-2 text-lg font-semibold md:text-base" href="#">
+          <Link
+            className="flex items-center gap-2 text-lg font-semibold md:text-base"
+            href="#"
+          >
             <Logo className="" size={2} />
             <span className="sr-only">Acme School</span>
           </Link>
@@ -34,26 +55,39 @@ export default function Component() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button className="rounded-full" size="icon" variant="ghost">
-                  <img src={user.picture} alt={user.name}
+                  <img
+                    src={user.picture}
+                    alt={user.name}
                     className="rounded-full"
                     height="32"
                     style={{
                       aspectRatio: "32/32",
                       objectFit: "cover",
                     }}
-                    width="32" />
+                    width="32"
+                  />
                   <span className="sr-only">Toggle user menu</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end ">
                 <div className="lg:hidden flex flex-col">
-                  <DropdownMenuItem><Link href="/dashboard">School</Link></DropdownMenuItem>
-                  <DropdownMenuItem><Link href="/students">Students</Link></DropdownMenuItem>
-                  <DropdownMenuItem><Link href="#">Courses</Link></DropdownMenuItem>
-                  <DropdownMenuItem><Link href="/reports">Reports</Link></DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link href="/dashboard">School</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link href="/students">Students</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link href="#">Courses</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link href="/reports">Reports</Link>
+                  </DropdownMenuItem>
                   <DropdownMenuSeparator />
                 </div>
-                <DropdownMenuItem><LogoutButton /></DropdownMenuItem>
+                <DropdownMenuItem>
+                  <LogoutButton />
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -91,23 +125,23 @@ export default function Component() {
 
             <DropdownMenuSeparator />
             <LogoutButton />
-
           </div>
 
           <main className="flex flex-1 flex-col gap-4 md:gap-8 px-2 pt-2 p-0 md:p-6">
             <div className="flex items-center">
               <h1 className="font-bold text-3xl md:text-4xl">Courses</h1>
-
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               <Card>
                 <CardContent className="grid gap-4">
-
                   <div className="grid gap-2">
-                    <h3 className="font-semibold text-lg pt-4">Introduction to Computer Science</h3>
+                    <h3 className="font-semibold text-lg pt-4">
+                      Introduction to Computer Science
+                    </h3>
                     <p className="text-gray-500 dark:text-gray-400 line-clamp-2">
-                      Explore the fundamental concepts of computer science, including algorithms, data structures, and
-                      programming languages.
+                      Explore the fundamental concepts of computer science,
+                      including algorithms, data structures, and programming
+                      languages.
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
@@ -116,40 +150,62 @@ export default function Component() {
                       </div>
 
                       <Dialog>
-                        <DialogTrigger><Button size="sm" variant="outline">
-                          View Course
-                        </Button></DialogTrigger>
+                        <DialogTrigger>
+                          <Button size="sm" variant="outline">
+                            View Course
+                          </Button>
+                        </DialogTrigger>
                         <DialogContent>
                           <DialogHeader>
-                            <DialogTitle>Introduction to Computer Science</DialogTitle>
+                            <DialogTitle>
+                              Introduction to Computer Science
+                            </DialogTitle>
                             <DialogDescription>
-                              <p className="text-black font-bold my-1">Course Overview</p>
-                              "Introduction to Computer Science" is a foundational course designed for beginners to learn core computer science concepts and programming skills.
-
-                              <h1 className="text-black font-bold my-1">Learning Objectives</h1>
-                              <div className="text-left px-2 mx-auto w-80">
-                              <li>Understand fundamental computer science concepts.</li>
-                              <li>Develop programming skills in Python.</li>
-                              <li>Apply computational thinking for problem-solving.</li>
-                              <li>Explore applications of computer science in various fields.</li>
-                              <li>Collaborate effectively on software projects.</li>
+                              <p className="text-black font-bold my-1">
+                                Course Overview
+                              </p>
+                              "Introduction to Computer Science" is a
+                              foundational course designed for beginners to
+                              learn core computer science concepts and
+                              programming skills.
+                              <h1 className="text-black font-bold my-1">
+                                Learning Objectives
+                              </h1>
+                              <div className="text-left px-2 w-96">
+                                <li>
+                                  Understand fundamental computer science
+                                  concepts.
+                                </li>
+                                <li>Develop programming skills in Python.</li>
+                                <li>
+                                  Apply computational thinking for
+                                  problem-solving.
+                                </li>
+                                <li>
+                                  Explore applications of computer science in
+                                  various fields.
+                                </li>
+                                <li>
+                                  Collaborate effectively on software projects.
+                                </li>
                               </div>
                             </DialogDescription>
                           </DialogHeader>
                         </DialogContent>
                       </Dialog>
-
                     </div>
                   </div>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="grid gap-4">
-
                   <div className="grid gap-2">
-                    <h3 className="font-semibold text-lg pt-4">Data Structures and Algorithms</h3>
+                    <h3 className="font-semibold text-lg pt-4">
+                      Data Structures and Algorithms
+                    </h3>
                     <p className="text-gray-500 dark:text-gray-400 line-clamp-2">
-                      Learn how to design and analyze efficient algorithms and data structures to solve complex problems.
+                      Learn how to design and analyze efficient algorithms and
+                      data structures to solve complex problems.
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
@@ -157,24 +213,45 @@ export default function Component() {
                         <span>300 students</span>
                       </div>
                       <Dialog>
-                        <DialogTrigger><Button size="sm" variant="outline">
-                          View Course
-                        </Button></DialogTrigger>
+                        <DialogTrigger>
+                          <Button size="sm" variant="outline">
+                            View Course
+                          </Button>
+                        </DialogTrigger>
                         <DialogContent>
                           <DialogHeader>
-                            <DialogTitle>Data Structures and Algorithms</DialogTitle>
+                            <DialogTitle>
+                              Data Structures and Algorithms
+                            </DialogTitle>
                             <DialogDescription>
-                              <p className="text-black font-bold my-1">Course Overview</p>
-                              "Data Structures and Algorithms" is an intermediate-level course that builds on foundational programming knowledge to explore essential data structures and algorithms.
-
-                              <h1 className="text-black font-bold my-1">Learning Objectives</h1>
-                              <div className="text-left px-2 mx-auto w-80">
-                              <li>Understand and implement core data structures.</li>
-                              <li>Analyze and apply various algorithms.</li>
-                              <li>Evaluate algorithm efficiency using Big O notation.</li>
-                              <li>Solve complex problems using appropriate algorithms.</li>
-                              <li>Develop skills for optimizing and debugging code.</li>
-</div>
+                              <p className="text-black font-bold my-1">
+                                Course Overview
+                              </p>
+                              "Data Structures and Algorithms" is an
+                              intermediate-level course that builds on
+                              foundational programming knowledge to explore
+                              essential data structures and algorithms.
+                              <h1 className="text-black font-bold my-1">
+                                Learning Objectives
+                              </h1>
+                              <div className="text-left px-2 w-96">
+                                <li>
+                                  Understand and implement core data structures.
+                                </li>
+                                <li>Analyze and apply various algorithms.</li>
+                                <li>
+                                  Evaluate algorithm efficiency using Big O
+                                  notation.
+                                </li>
+                                <li>
+                                  Solve complex problems using appropriate
+                                  algorithms.
+                                </li>
+                                <li>
+                                  Develop skills for optimizing and debugging
+                                  code.
+                                </li>
+                              </div>
                             </DialogDescription>
                           </DialogHeader>
                         </DialogContent>
@@ -185,11 +262,13 @@ export default function Component() {
               </Card>
               <Card>
                 <CardContent className="grid gap-4">
-
                   <div className="grid gap-2">
-                    <h3 className="font-semibold text-lg pt-4">Web Development Fundamentals</h3>
+                    <h3 className="font-semibold text-lg pt-4">
+                      Web Development Fundamentals
+                    </h3>
                     <p className="text-gray-500 dark:text-gray-400 line-clamp-2">
-                      Dive into the world of web development, covering HTML, CSS, JavaScript, and modern web frameworks.
+                      Dive into the world of web development, covering HTML,
+                      CSS, JavaScript, and modern web frameworks.
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
@@ -197,24 +276,46 @@ export default function Component() {
                         <span>250 students</span>
                       </div>
                       <Dialog>
-                        <DialogTrigger><Button size="sm" variant="outline">
-                          View Course
-                        </Button></DialogTrigger>
+                        <DialogTrigger>
+                          <Button size="sm" variant="outline">
+                            View Course
+                          </Button>
+                        </DialogTrigger>
                         <DialogContent>
                           <DialogHeader>
-                            <DialogTitle>Web Development Fundamentals</DialogTitle>
+                            <DialogTitle>
+                              Web Development Fundamentals
+                            </DialogTitle>
                             <DialogDescription>
-                              <p className="text-black font-bold my-1">Course Overview</p>
-                              "Web Development Fundamentals" is an introductory course designed to teach students the essential skills and technologies needed to build modern, responsive websites and web applications.
-
-                              <h1 className="text-black font-bold my-1">Learning Objectives</h1>
-                              <div className="text-left px-2 mx-auto w-80">
-                              <li>Understand the basics of web development and the structure of web applications.</li>
-                              <li>Create web pages using HTML for content, CSS for styling, and JavaScript for interactivity.</li>
-                              <li>Develop responsive web designs that work on various devices.</li>
-                              <li>Learn about web development tools and frameworks.</li>
-                              <li>Deploy and maintain web applications.</li>
-</div>
+                              <p className="text-black font-bold my-1">
+                                Course Overview
+                              </p>
+                              "Web Development Fundamentals" is an introductory
+                              course designed to teach students the essential
+                              skills and technologies needed to build modern,
+                              responsive websites and web applications.
+                              <h1 className="text-black font-bold my-1">
+                                Learning Objectives
+                              </h1>
+                              <div className="text-left px-2 w-96">
+                                <li>
+                                  Understand the basics of web development and
+                                  the structure of web applications.
+                                </li>
+                                <li>
+                                  Create web pages using HTML for content, CSS
+                                  for styling, and JavaScript for interactivity.
+                                </li>
+                                <li>
+                                  Develop responsive web designs that work on
+                                  various devices.
+                                </li>
+                                <li>
+                                  Learn about web development tools and
+                                  frameworks.
+                                </li>
+                                <li>Deploy and maintain web applications.</li>
+                              </div>
                             </DialogDescription>
                           </DialogHeader>
                         </DialogContent>
@@ -225,12 +326,13 @@ export default function Component() {
               </Card>
               <Card>
                 <CardContent className="grid gap-4">
-
                   <div className="grid gap-2">
-                    <h3 className="font-semibold text-lg pt-4">Mobile App Development</h3>
+                    <h3 className="font-semibold text-lg pt-4">
+                      Mobile App Development
+                    </h3>
                     <p className="text-gray-500 dark:text-gray-400 line-clamp-2">
-                      Learn how to build cross-platform mobile applications using frameworks like React Native and
-                      Flutter.
+                      Learn how to build cross-platform mobile applications
+                      using frameworks like React Native and Flutter.
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
@@ -238,23 +340,44 @@ export default function Component() {
                         <span>334 students</span>
                       </div>
                       <Dialog>
-                        <DialogTrigger><Button size="sm" variant="outline">
-                          View Course
-                        </Button></DialogTrigger>
+                        <DialogTrigger>
+                          <Button size="sm" variant="outline">
+                            View Course
+                          </Button>
+                        </DialogTrigger>
                         <DialogContent>
                           <DialogHeader>
                             <DialogTitle>Mobile App Development</DialogTitle>
                             <DialogDescription>
-                              <p className="text-black font-bold my-1">Course Overview</p>
-                              "Mobile App Development" is an introductory course designed to teach students the essential skills and technologies needed to create mobile applications for iOS and Android platforms.
-
-                              <h1 className="text-black font-bold my-1">Learning Objectives</h1>
-                              <div className="text-left px-2 mx-auto w-80">
-                              <li>Understand the fundamentals of mobile app development.</li>
-                              <li>Develop mobile applications for iOS and Android platforms.</li>
-                              <li>Learn to use development frameworks and tools.</li>
-                              <li>Learn about web development tools and frameworks.</li>
-                              <li>Deploy and maintain mobile applications.</li>
+                              <p className="text-black font-bold my-1">
+                                Course Overview
+                              </p>
+                              "Mobile App Development" is an introductory course
+                              designed to teach students the essential skills
+                              and technologies needed to create mobile
+                              applications for iOS and Android platforms.
+                              <h1 className="text-black font-bold my-1">
+                                Learning Objectives
+                              </h1>
+                              <div className="text-left px-2 w-96">
+                                <li>
+                                  Understand the fundamentals of mobile app
+                                  development.
+                                </li>
+                                <li>
+                                  Develop mobile applications for iOS and
+                                  Android platforms.
+                                </li>
+                                <li>
+                                  Learn to use development frameworks and tools.
+                                </li>
+                                <li>
+                                  Learn about web development tools and
+                                  frameworks.
+                                </li>
+                                <li>
+                                  Deploy and maintain mobile applications.
+                                </li>
                               </div>
                             </DialogDescription>
                           </DialogHeader>
@@ -285,7 +408,10 @@ export default function Component() {
                     <TableCell className="font-medium">
                       <div className="flex items-center gap-4">
                         <Avatar>
-                          <AvatarImage alt="Student Avatar" src="/placeholder-user.jpg" />
+                          <AvatarImage
+                            alt="Student Avatar"
+                            src="/placeholder-user.jpg"
+                          />
                           <AvatarFallback>JS</AvatarFallback>
                         </Avatar>
                         <div>John Doe</div>
@@ -324,7 +450,10 @@ export default function Component() {
                     <TableCell className="font-medium">
                       <div className="flex items-center gap-4">
                         <Avatar>
-                          <AvatarImage alt="Student Avatar" src="/placeholder-user.jpg" />
+                          <AvatarImage
+                            alt="Student Avatar"
+                            src="/placeholder-user.jpg"
+                          />
                           <AvatarFallback>SM</AvatarFallback>
                         </Avatar>
                         <div>Sarah Miller</div>
@@ -363,7 +492,10 @@ export default function Component() {
                     <TableCell className="font-medium">
                       <div className="flex items-center gap-4">
                         <Avatar>
-                          <AvatarImage alt="Student Avatar" src="/placeholder-user.jpg" />
+                          <AvatarImage
+                            alt="Student Avatar"
+                            src="/placeholder-user.jpg"
+                          />
                           <AvatarFallback>JD</AvatarFallback>
                         </Avatar>
                         <div>Jessica Davis</div>
@@ -396,10 +528,8 @@ export default function Component() {
         </div>
       </div>
     )
-  )
+  );
 }
-
-
 
 function BarChart(props) {
   return (
@@ -451,9 +581,8 @@ function BarChart(props) {
         ariaLabel="A bar chart showing data"
       />
     </div>
-  )
+  );
 }
-
 
 function BookIcon(props) {
   return (
@@ -471,10 +600,8 @@ function BookIcon(props) {
     >
       <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
     </svg>
-  )
+  );
 }
-
-
 
 function FileIcon(props) {
   return (
@@ -493,9 +620,8 @@ function FileIcon(props) {
       <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
       <path d="M14 2v4a2 2 0 0 0 2 2h4" />
     </svg>
-  )
+  );
 }
-
 
 function GraduationCapIcon(props) {
   return (
@@ -515,9 +641,8 @@ function GraduationCapIcon(props) {
       <path d="M22 10v6" />
       <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
     </svg>
-  )
+  );
 }
-
 
 function LineChart(props) {
   return (
@@ -589,9 +714,8 @@ function LineChart(props) {
         role="application"
       />
     </div>
-  )
+  );
 }
-
 
 function SchoolIcon(props) {
   return (
@@ -614,10 +738,8 @@ function SchoolIcon(props) {
       <path d="M6 5v17" />
       <circle cx="12" cy="9" r="2" />
     </svg>
-  )
+  );
 }
-
-
 
 function BellIcon(props) {
   return (
@@ -636,11 +758,8 @@ function BellIcon(props) {
       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
     </svg>
-  )
+  );
 }
-
-
-
 
 function CalendarIcon(props) {
   return (
@@ -661,9 +780,8 @@ function CalendarIcon(props) {
       <rect width="18" height="18" x="3" y="4" rx="2" />
       <path d="M3 10h18" />
     </svg>
-  )
+  );
 }
-
 
 function ClipboardIcon(props) {
   return (
@@ -682,11 +800,8 @@ function ClipboardIcon(props) {
       <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
       <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
     </svg>
-  )
+  );
 }
-
-
-
 
 function SearchIcon(props) {
   return (
@@ -705,9 +820,8 @@ function SearchIcon(props) {
       <circle cx="11" cy="11" r="8" />
       <path d="m21 21-4.3-4.3" />
     </svg>
-  )
+  );
 }
-
 
 function SettingsIcon(props) {
   return (
@@ -726,9 +840,8 @@ function SettingsIcon(props) {
       <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
       <circle cx="12" cy="12" r="3" />
     </svg>
-  )
+  );
 }
-
 
 function UsersIcon(props) {
   return (
@@ -749,5 +862,5 @@ function UsersIcon(props) {
       <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
       <path d="M16 3.13a4 4 0 0 1 0 7.75" />
     </svg>
-  )
+  );
 }
