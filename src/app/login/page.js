@@ -18,25 +18,25 @@ const LoginButton = () => {
         <div className="max-w-[32rem] overflow-hidden">
           <BoxReveal boxColor={"#5046e6"} duration={0.3}>
             <p className="text-[3.5rem] font-semibold">
-              School Flow<span className="text-[#]">.</span>
+              School Flow<span className="text-[#] text-[#5046e6]">.</span>
             </p>
           </BoxReveal>
 
           <BoxReveal boxColor={"#5046e6"} duration={0.3}>
             <h2 className="mt-[.5rem] text-[1rem]">
               A School management System for{" "}
-              <span className="text-[#]">Schools.</span>
+              <span className="text-[#] text-[#5046e6]">Schools.</span>
             </h2>
           </BoxReveal>
 
           <BoxReveal boxColor={"#5046e6"} duration={0.3}>
-            <div className="mt-[1.5rem]">
+            <div className="mt-[1rem]">
               <div>
                 Experience a new era of school administration with SchoolFlow.
                 We're dedicated to providing you with a comprehensive,
                 user-friendly, and efficient solution that makes managing your
                 educational institution a breeze.
-                <li className="font-semibold text-[#5046e6]">
+                <li className="font-semibold text-[#5046e6] mt-5">
                   {" "}
                   Real-Time Gradebook
                 </li>
