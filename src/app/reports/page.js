@@ -84,13 +84,13 @@ export default function Component() {
           <LogoutButton/>
           
         </div>
-        <main className="container mx-auto px-3 md:px-6 py-8">
-      <div className="">
+        <main className="w-full px-4 pt-2 p-0 md:px-6">
+      <div>
         <div>
           <h1 className="text-3xl font-bold md:text-4xl">School Performance Report</h1>
-          <p className="text-gray-500 dark:text-gray-400 w-[20rem] md:w-[60rem] mb-3">Overview of key metrics and student performance data.</p>
+          <p className="text-gray-500 dark:text-gray-400 w-auto mb-3">Overview of key metrics and student performance data.</p>
         </div>
-        <div className="grid md:grid md:grid-cols-3 gap-4 mb-6">
+        <div className="grid md:grid md:grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
           <Card>
             <CardHeader className="flex items-center justify-between">
               <CardTitle>Total Students</CardTitle>

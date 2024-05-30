@@ -94,9 +94,9 @@ export default function Component() {
 
           </div>
 
-          <main className="flex flex-1 flex-col gap-4 px-2 md:gap-8 md:p-6">
+          <main className="flex flex-1 flex-col gap-4 md:gap-8 px-2 pt-2 p-0 md:p-6">
             <div className="flex items-center">
-              <h1 className="font-bold text-3xl md:text-2xl mt-7">Courses</h1>
+              <h1 className="font-bold text-3xl md:text-4xl">Courses</h1>
 
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
