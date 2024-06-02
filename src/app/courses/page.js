@@ -171,7 +171,7 @@ export default function Component() {
                               <h1 className="text-black font-bold my-1">
                                 Learning Objectives
                               </h1>
-                              <div className="text-left px-2 w-96">
+                              <div className="text-left px-2 w-96 sm:w-[30rem]">
                                 <li>
                                   Understand fundamental computer science
                                   concepts.
@@ -234,7 +234,7 @@ export default function Component() {
                               <h1 className="text-black font-bold my-1">
                                 Learning Objectives
                               </h1>
-                              <div className="text-left px-2 w-96">
+                              <div className="text-left px-2 w-96 sm:w-[30rem]">
                                 <li>
                                   Understand and implement core data structures.
                                 </li>
@@ -297,7 +297,7 @@ export default function Component() {
                               <h1 className="text-black font-bold my-1">
                                 Learning Objectives
                               </h1>
-                              <div className="text-left px-2 w-96">
+                              <div className="text-left px-2 w-96 sm:w-[30rem]">
                                 <li>
                                   Understand the basics of web development and
                                   the structure of web applications.
@@ -359,7 +359,7 @@ export default function Component() {
                               <h1 className="text-black font-bold my-1">
                                 Learning Objectives
                               </h1>
-                              <div className="text-left px-2 w-96">
+                              <div className="text-left px-2 w-96 sm:w-[30rem] ">
                                 <li>
                                   Understand the fundamentals of mobile app
                                   development.
