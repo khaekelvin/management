@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # School Management System
 
 ## Overview
@@ -17,11 +15,13 @@ Built with **React** for the frontend and **Tailwind CSS** for styling.
 - **Gradebook:** Record and manage student grades.
 - **Events and Announcements:** Share important events and announcements.
 
+ ![UI](https://res.cloudinary.com/dvfmse8he/image/upload/v1721071243/Screenshot_2024-07-15_at_7.19.29_PM_jn6wef.png)
+
 ## Technologies Used
 
 - **Frontend:** React, Tailwind CSS
-- **Backend:** Node.js, Express.js, MongoDB
-- **Authentication:** JWT (JSON Web Tokens)
+- **Backend:** Node.js
+- **Authentication:** Auth0
 
 ## Prerequisites
 
